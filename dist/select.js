@@ -635,6 +635,8 @@ uis.controller('uiSelectCtrl',
           var inputWidth = containerWidth - input.offsetLeft - 10;
           if (inputWidth < 50) inputWidth = containerWidth;
           ctrl.searchInput.css('width', inputWidth+'px');
+          // Added to set the initial width of the input to the placeholder length
+          input.setAttribute('size',input.getAttribute('placeholder').length)
           return true;
         };
 
